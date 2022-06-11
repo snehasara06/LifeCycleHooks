@@ -1,0 +1,20 @@
+<h3>Child Component</h3>
+      <br>
+      <!-- Data as a input -->
+      Parent to Child(@Input):
+      <b>{{message}}</b>
+      <br />
+      <br />
+
+      <!-- Injected Content -->
+       Parent to Child(content injection):
+      <ng-content></ng-content>
+      <br /> 
+      <br /> 
+     
+      FirstName :  <input type="text" name="firstName" [(ngModel)]="personName.firstName" >
+      <br />
+      <br />
+      LastName : <input type="text" name="lastName" [(ngModel)]="personName.lastName" >
+ 
+      <app-grand-child [personName]="personName"></app-grand-child>

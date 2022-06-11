@@ -1,0 +1,25 @@
+<h1 style="text-align: center;">Life Cycle Hooks</h1>
+<!-- <app-parent></app-parent> -->
+<h3>Parent Component</h3>
+  <b>{{name}}</b>
+  <br />
+  <br />
+  <input type="text"name="message"[(ngModel)]="message"/>
+  <br />
+  <br />
+  <input type="text"name="content"[(ngModel)]="content"/>
+  <br />
+  <br />
+  
+  Hide child :
+  <input type="checkbox"name="hideChild"[(ngModel)]="hideChild"/>
+  <br />
+  <br />
+
+
+
+<!-- <app-child></app-child> -->
+<app-child [message]="message" *ngIf="!hideChild">
+  <!-- Injected Content -->
+  <b> {{ content }} </b>
+</app-child>
